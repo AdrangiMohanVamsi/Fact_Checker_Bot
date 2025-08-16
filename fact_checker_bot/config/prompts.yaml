@@ -1,0 +1,34 @@
+initial_response_prompt: |
+  Please provide a preliminary answer to the following claim: "{claim}".
+
+assumption_extraction_prompt: |
+  Based on the following response, what are the key assumptions made? 
+
+  Response: "{response}"
+
+verification_prompt: |
+  For each of the following assumptions, determine if it is true, false, or uncertain. 
+
+  Assumptions: 
+  {assumptions}
+
+evidence_gathering_prompt: |
+  For each of the following assumptions, please provide a brief summary of the evidence you can find to support or contradict it. 
+
+  Assumptions: 
+  {assumptions}
+
+evidence_synthesis_prompt: |
+  Based on the following evidence, please provide a synthesized summary of the evidence, identify any conflicts, and provide a confidence score for the original claim. 
+
+  Original Claim: "{claim}"
+  Evidence: 
+  {evidence}
+
+final_synthesis_prompt: |
+  Based on the initial response, the verification of assumptions, and the synthesized evidence, please provide a final, refined answer to the original claim. 
+
+  Original Claim: "{claim}"
+  Initial Response: "{initial_response}"
+  Verified Assumptions: "{verified_assumptions}"
+  Synthesized Evidence: "{synthesized_evidence}"
